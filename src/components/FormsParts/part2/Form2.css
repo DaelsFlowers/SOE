@@ -22,18 +22,39 @@
     display: flex;
     margin-top: 1rem;
 }
+
+.part1form22{
+    display: flex;
+    margin-top: 1rem;
+    margin-left: -3rem;
+}
 .form2div{
     margin: auto;
     width: 45rem;
 }
-.label1form2{
-    font-family: 'Rubik', sans-serif;
-    font-size: 18px;
-    font-weight: 100;
-    color: rgb(0, 0, 0);
+.form2div2{
+    margin: auto;
+    width: 20rem;
 }
 
-.input1form2{
+.form2div3{
+    margin: auto;
+    width: 10rem;
+}
+
+.form2div1{
+    margin: auto;
+    width: 20rem;
+}
+.label1form2{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
+;
+}
+
+.input1form25{
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
     font-weight: 100;
@@ -44,5 +65,52 @@
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
-    border: 0px ;
+}
+.input1form22{
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
+    margin-left: 1rem;   
+    width: 13rem;
+    float: right;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+.input1form21{
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
+    margin-left: 1rem;   
+    width: 5rem;
+    float: right;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+.dropdown{
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
+    margin-left: 1rem;   
+    width: 7rem;
+    float: right;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+}
+.part1form23{
+    display: flex;
+    margin-top: 1rem;
+    margin-left: -5rem;
+}
+.part1form24{
+    display: flex;
+    margin-top: 1rem;
+    margin-left: -5rem;
 }
