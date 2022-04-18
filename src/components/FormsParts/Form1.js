@@ -7,7 +7,7 @@ function Form1() {
     let count = 1;
     return (
         <div className='part1'>
-            <div className='imagenlogo'></div>
+            <div className='imagenlogo'>LOGOTIPO</div>
             <div className='form1'>
                 <div className="form11">
                     <div className="label">CIUDAD

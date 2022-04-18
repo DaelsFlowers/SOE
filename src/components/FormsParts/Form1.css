@@ -11,7 +11,6 @@
 }
 
 .form1{
-    margin-left: 1rem;
     display: flex;
 }
 
@@ -20,20 +19,21 @@
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
     font-weight: 100;
-    margin: .5rem;
-    margin-bottom: 5rem;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+    margin-top: 3rem;
 }
 .input{
-    margin-top: 1rem;
     font-family:  'Rubik', sans-serif;
     font-weight: 400;
     font-size: 20px;
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
-}
-.form11{
-    padding-right:  10rem;
+    margin-left: 1rem;
 }
 
 .buttons{
@@ -42,19 +42,25 @@
     font-size: 20px;
     text-align: center;
     color: rgb(0, 0, 0);
+    margin: auto;
     display: block;
-    float: right;
-    margin-right: auto;
+    margin-left: 5rem;
 }
 .folio{
-    margin-top: 1rem;
+    margin-left: 1.5rem;
+    font-family:  'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
     text-align: center;
     border: 2px solid black;
-    width: 10rem;
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    padding: 0rem 4.5rem;
 }
+
+
+
 .Clear{
     background-color: rgba(240, 240, 240, 0);
     border: 3px solid black;
