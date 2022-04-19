@@ -1,0 +1,199 @@
+:root{
+    --main-bg-contenedor1: rgba(255, 140, 9, 0);
+    --main-bg-contenedor2: rgba(58, 255, 9, 0);
+    --main-bg-etiqueta: rgba(255, 251, 9, 0);
+    --main-bg-label: rgba(54, 9, 255, 0);
+    --main-bg-input: rgba(255, 9, 214, 0);
+  }
+
+
+  .titulo{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .formulario1{
+  background-color: rgb(255, 255, 255);
+  width: min-content;
+  height: 27rem;
+  margin: auto;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.5); 
+    box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.5);
+  margin-bottom: 2rem;
+  }
+  
+  .contenedor1{
+  background-color: var(--main-bg-contenedor1);
+  width: 40rem;
+  float: left;
+  display: block;
+  margin: 1rem auto 1rem 0rem;
+  }
+  .contenedor2{
+  background-color: var(--main-bg-contenedor1);
+  width: 40rem;
+  float: left;
+  margin: 1rem auto 1rem 1rem;
+  }
+  .contenedor3{
+    background-color: var(--main-bg-contenedor2);
+    width: 81rem;
+    float: left;
+    margin: 0rem auto 0rem 0rem ;
+  
+  }
+  
+  .etiqueta1{
+  background-color: var(--main-bg-etiqueta);
+  width: 30rem;
+  height: 2rem;
+  margin: 1rem auto 1rem auto;
+  display: flex;
+  align-items: center;
+  }
+  .label1{
+    background-color:var(--main-bg-label);
+    width: 10rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+  }
+  .input1{
+    background-color: var(--main-bg-input);
+    width: 22rem;
+    height: 1rem;
+    margin: auto 0 1rem auto;
+    float: right;
+  }
+  
+  
+  .etiqueta2{
+    background-color: var(--main-bg-etiqueta);
+    width: 18rem;
+    height: 2rem;
+    margin: 1rem auto 1rem auto;
+    display: flex;
+    float: left;
+    align-items: center;
+    margin: 0rem auto 1rem 5rem;
+  }
+  .label2{
+    background-color: var(--main-bg-label);
+    width: 4rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+  }
+  .input2{
+    background-color: var(--main-bg-input);
+    width: 12rem;
+    height: 1rem;
+    margin: auto 0 1rem auto;
+    float: right;
+  }
+  
+  
+  .etiqueta3{
+    background-color:var(--main-bg-etiqueta);
+    width: 11rem;
+    height: 2rem;
+    margin: 1rem auto 1rem auto;
+    display: flex;
+    float: left;
+    align-items: center;
+    margin: 0rem auto 1rem 1rem;
+  }
+  .label3{
+    background-color:var(--main-bg-label);
+    width: 2rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+  }
+  .input3{
+    background-color:var(--main-bg-input);
+    width: 9rem;
+    height: 1rem;
+    margin: auto 0 1rem auto;
+    float: right;
+  }
+  
+  
+  .etiqueta4{
+    background-color: var(--main-bg-etiqueta);
+    width: 15rem;
+    height: 2rem;
+    margin: 1rem auto 1rem auto;
+    display: flex;
+    float: left;
+    align-items: center;
+    margin: 0rem -5rem 1rem 5rem;
+  }
+  .label4{
+    background-color:var(--main-bg-label);
+    width: 5rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+    
+  }
+  .label40{
+    background-color:var(--main-bg-label);
+    width: 5rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+    margin-left: 1rem;
+  }
+  .input4{
+    background-color:var(--main-bg-input);
+    width: 9rem;
+    height: 1rem;
+    margin: auto 0 1rem auto;
+    float: right;
+  }
+  
+  
+  .etiqueta5{
+    background-color:var(--main-bg-etiqueta);
+    width: 80rem;
+    height: 2rem;
+    margin: 1rem auto 1rem auto;
+    display: flex;
+    align-items: center;
+  }
+  .label5{
+    background-color:var(--main-bg-label);
+    width: 12rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+  }
+  .input5{
+    background-color:var(--main-bg-input);
+    width: 79rem;
+    height: 1rem;
+    margin: auto 0 1rem auto;
+    float: right;
+    font-size: 12px;
+  }
