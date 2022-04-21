@@ -399,11 +399,38 @@ function Forms() {
                                             form_signature="15652032749810445774"
                                             form_signature_string="https://bootswatch.com&amp;&amp;staticEmail&amp;exampleInputEmail1&amp;exampleInputPassword1&amp;exampleSelect1&amp;exampleTextarea"
                                             visibility_annotation="true">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>AGUASCALIENTES</option>
+                                            <option>BAJA CALIFORNIA</option>
+                                            <option>BAJA CALIFORNIA SUR</option>
+                                            <option>CAMPECHE</option>
+                                            <option>CHIAPAS</option>
+                                            <option>CHIHUAHUA</option>
+                                            <option>CIUDAD DE MÉXICO</option>
+                                            <option>COAHUILA</option>
+                                            <option>COLIMA</option>
+                                            <option>DURANGO</option>
+                                            <option>GUANAJUATO</option>
+                                            <option>GUERRERO</option>
+                                            <option>HIDALGO</option>
+                                            <option>JALISCO</option>
+                                            <option>MÉXICO</option>
+                                            <option>MICHOACÁN</option>
+                                            <option>MORELOS</option>
+                                            <option>NAYARIT</option>
+                                            <option>NUEVO LEÓN</option>
+                                            <option>OAXACA</option>
+                                            <option>PUEBLA</option>
+                                            <option>QUERÉTARO</option>
+                                            <option>QUINTANA ROO</option>
+                                            <option>SAN LUIS POTOSÍ</option>
+                                            <option>SINALOA</option>
+                                            <option>SONORA</option>
+                                            <option>TABASCO</option>
+                                            <option>TAMAULIPAS</option>
+                                            <option>TLAXCALA</option>
+                                            <option>VERACRUZ</option>
+                                            <option>YUCATÁN</option>
+                                            <option>ZACATECAS</option>
                                         </select>
                                     </div>
                                 </div>
@@ -424,11 +451,9 @@ function Forms() {
                                             form_signature="15652032749810445774"
                                             form_signature_string="https://bootswatch.com&amp;&amp;staticEmail&amp;exampleInputEmail1&amp;exampleInputPassword1&amp;exampleSelect1&amp;exampleTextarea"
                                             visibility_annotation="true">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>PUE: PAGO EN UNA SOLA EXHIBICÍPON</option>
+                                            <option>PPD: PAGO EN PARCIALIDADES ODIFERIDO</option>
+
                                         </select>
                                     </div>
                                 </div>
@@ -447,11 +472,28 @@ function Forms() {
                                             form_signature="15652032749810445774"
                                             form_signature_string="https://bootswatch.com&amp;&amp;staticEmail&amp;exampleInputEmail1&amp;exampleInputPassword1&amp;exampleSelect1&amp;exampleTextarea"
                                             visibility_annotation="true">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>001 EFECTIVO</option>
+                                            <option>002 CHEQUE NOMINATIVO</option>
+                                            <option>003 TRANSFERENCIA ELECTRÓNICA DE FONDOS SPEI</option>
+                                            <option>004 TARJETA DE CRÉDITO</option>
+                                            <option>005 MONEDERO ELECTRONICO</option>
+                                            <option>006 DINERO ELECTRÓNICO</option>
+                                            <option>008 VALES DE DESPENSA</option>
+                                            <option>012 DACIÓN EN PAGO</option>
+                                            <option>013 PAGO POR SUBROGACÍON</option>
+                                            <option>014 PAGO POR CONSIGNACÍON</option>
+                                            <option>015 CONDONACIÍON</option>
+                                            <option>017 COMPENSACÍON</option>
+                                            <option>023 NOVACIÓN</option>
+                                            <option>024 CONFUSIÓN</option>
+                                            <option>025 REMISION DE DEUDA</option>
+                                            <option>026 PRESCRIPCIÓN O CADUCUDAD</option>
+                                            <option>027 A SATISFACCIÓN DEL ACREEDOR</option>
+                                            <option>028 TARJETA DE DÉBITO</option>
+                                            <option>029 TARJETA DE SERVICIOS</option>
+                                            <option>030 APLICACIÓN DE ANTICIPOS</option>
+                                            <option>031 INTERMEDIARIO PAGOS</option>
+                                            <option>099 POR DEFINIR</option>
                                         </select>
                                     </div>
                                 </div>
@@ -470,11 +512,28 @@ function Forms() {
                                             form_signature="15652032749810445774"
                                             form_signature_string="https://bootswatch.com&amp;&amp;staticEmail&amp;exampleInputEmail1&amp;exampleInputPassword1&amp;exampleSelect1&amp;exampleTextarea"
                                             visibility_annotation="true">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>G01 ADQUISICIÓN DE MERCANCIAS</option>
+                                            <option>G02 DEVOLUCIONES, DESCUENTOS O BONIFICACIONES</option>
+                                            <option>G03 GASTOS EN GENERAL</option>
+                                            <option>I01 CONSTRUCCIONES</option>
+                                            <option>I02 MOBILIARIO Y EQUIPO DE OFICINA POR INVERSIONES</option>
+                                            <option>I03 EQUIPO DE TRANSPORTE</option>
+                                            <option>I04 EQUIPO DE COMPUTO Y ACCESORIOS</option>
+                                            <option>I05 DADOS, TROQUELES, MOLDES, MATRICES Y HERRAMENTAL</option>
+                                            <option>I06 COMUNICACIONES TELEFONICAS</option>
+                                            <option>I07 COMUNICACIONES SATELITALES</option>
+                                            <option>I08 OTRA MAQUINARIA Y EQUIPO</option>
+                                            <option>D01 HONORARIOS MEDICOS, DENTALESY GASTOS HOSPITALARIOS</option>
+                                            <option>D02 GASTOS MEDICOS POR INCAPACIDAD O DISCAPACIDAD</option>
+                                            <option>D03 GASTOS FUNERALES</option>
+                                            <option>D04 DONATIVOS</option>
+                                            <option>D05 INTERESES POR CREDITOS HIPOTECARIOS</option>
+                                            <option>D06 APORTACIONES VOLUNTARIOAS AL SAR</option>
+                                            <option>D07 PRIMAS POR SEGUROS DE GASTOS MEDICOS</option>
+                                            <option>D08 GASTOS DE TRANSPORTACION ESCOLAR OBLIGATORIA</option>
+                                            <option>D09 DEPOSITOS EN CUENTAS PARA EL AHORRO, PRIMAS CON BASE</option>
+                                            <option>D10 PAGOS POR SERVICIOS EDUCATIVOS(COLEGIATURAS)</option>
+                                            <option>P01 POR DEFINIR</option>
                                         </select>
                                     </div>
                                 </div>
