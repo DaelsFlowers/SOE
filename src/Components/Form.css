@@ -1,0 +1,713 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+:root{
+    --main-bg-contenedor1: rgba(255, 140, 9, 0);
+    --main-bg-contenedor2: rgba(58, 255, 9, 0);
+    --main-bg-etiqueta: rgba(255, 251, 9, 0);
+    --main-bg-label: rgba(54, 9, 255, 0);
+    --main-bg-input: rgba(255, 9, 214, 0);
+    --main-bg-contenido0: rgba(73, 17, 230, 0);
+    --main-bg-etiquetas0: rgba(252, 143, 0, 0);
+    --main-bg-label0: rgba(195, 245, 13, 0);
+    --main-bg-input0: rgba(6, 217, 245, 0);
+    --main-bg-contenedor0: rgba(4, 233, 73, 0);
+    --main-bg-formulario2: rgb(255, 255, 255);
+    --main-bg-contenedor21: rgba(228, 148, 0, 0);
+    --main-bg-contenedor22: rgba(255, 102, 0, 0);
+    --main-bg-etiqueta21: rgba(185, 185, 185, 0);
+    --main-bg-label21: rgba(68, 0, 255, 0);
+    --main-bg-input21: rgba(89, 0, 255, 0);
+    --main-bg-formulario3: rgb(255, 255, 255);
+    --main-bg-contenedor31: rgba(228, 148, 0, 0);
+    --main-bg-contenedor32: rgba(255, 102, 0, 0);
+    --main-bg-etiqueta31: rgba(200, 255, 0, 0);
+    --main-bg-label31: rgba(68, 0, 255, 0);
+    --main-bg-input31: rgba(89, 0, 255, 0);
+    --main-bg-formulario5: rgb(255, 255, 255);
+    --main-bg-contenedor51: rgba(228, 148, 0, 0);
+    --main-bg-contenedor52: rgba(255, 102, 0, 0);
+    --main-bg-etiqueta51: rgba(200, 255, 0, 0);
+    --main-bg-label51: rgb(25, 0, 255,0);
+    --main-bg-input51: rgba(89, 0, 255, 0);
+}
+
+.titulo{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .formulario1{
+  background-color: rgb(255, 255, 255);
+  width: min-content;
+  height: 27rem;
+  margin: auto;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.5); 
+    box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.5);
+  margin-bottom: 2rem;
+  }
+  
+  .contenedor1{
+  background-color: var(--main-bg-contenedor1);
+  width: 40rem;
+  float: left;
+  display: block;
+  margin: 1rem auto 1rem 0rem;
+  }
+  .contenedor2{
+  background-color: var(--main-bg-contenedor1);
+  width: 40rem;
+  float: left;
+  margin: 1rem auto 1rem 1rem;
+  }
+  .contenedor3{
+    background-color: var(--main-bg-contenedor2);
+    width: 81rem;
+    float: left;
+    margin: 0rem auto 0rem 0rem ;
+  
+  }
+  
+  .etiqueta1{
+  background-color: var(--main-bg-etiqueta);
+  width: 30rem;
+  height: 2rem;
+  margin: 1rem auto 1rem auto;
+  display: flex;
+  align-items: center;
+  }
+  .label1{
+    background-color:var(--main-bg-label);
+    width: 10rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+  }
+  .input1{
+    background-color: var(--main-bg-input);
+    width: 22rem;
+    height: 1rem;
+    margin: auto 0 1rem auto;
+    float: right;
+  }
+  
+  
+  .etiqueta2{
+    background-color: var(--main-bg-etiqueta);
+    width: 18rem;
+    height: 2rem;
+    margin: 1rem auto 1rem auto;
+    display: flex;
+    float: left;
+    align-items: center;
+    margin: 0rem auto 1rem 5rem;
+  }
+  .label2{
+    background-color: var(--main-bg-label);
+    width: 4rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+  }
+  .input2{
+    background-color: var(--main-bg-input);
+    width: 12rem;
+    height: 1rem;
+    margin: auto 0 1rem auto;
+    float: right;
+  }
+  
+  
+  .etiqueta3{
+    background-color:var(--main-bg-etiqueta);
+    width: 11rem;
+    height: 2rem;
+    margin: 1rem auto 1rem auto;
+    display: flex;
+    float: left;
+    align-items: center;
+    margin: 0rem auto 1rem 1rem;
+  }
+  .label3{
+    background-color:var(--main-bg-label);
+    width: 2rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+  }
+  .input3{
+    background-color:var(--main-bg-input);
+    width: 9rem;
+    height: 1rem;
+    margin: auto 0 1rem auto;
+    float: right;
+  }
+  
+  
+  .etiqueta4{
+    background-color: var(--main-bg-etiqueta);
+    width: 15rem;
+    height: 2rem;
+    margin: 1rem auto 1rem auto;
+    display: flex;
+    float: left;
+    align-items: center;
+    margin: 0rem -5rem 1rem 5rem;
+  }
+  .label4{
+    background-color:var(--main-bg-label);
+    width: 5rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+    
+  }
+  .label40{
+    background-color:var(--main-bg-label);
+    width: 5rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+    margin-left: 1rem;
+  }
+  .input4{
+    background-color:var(--main-bg-input);
+    width: 9rem;
+    height: 1rem;
+    margin: auto 0 1rem auto;
+    float: right;
+  }
+  
+  
+  .etiqueta5{
+    background-color:var(--main-bg-etiqueta);
+    width: 80rem;
+    height: 2rem;
+    margin: 1rem auto 1rem auto;
+    display: flex;
+    align-items: center;
+  }
+  .label5{
+    background-color:var(--main-bg-label);
+    width: 12rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+  }
+  .input5{
+    background-color:var(--main-bg-input);
+    width: 79rem;
+    height: 1rem;
+    margin: auto 0 1rem auto;
+    float: right;
+    font-size: 12px;
+  }
+
+.contenido0{
+background-color: var(--main-bg-contenido0);
+width: auto;
+height: 14rem;
+margin: 2rem;
+display: flex;
+}
+
+.contenedor01{
+    background-color: gray;
+    width: 50rem;
+    height: 13rem;
+    margin: 1rem;
+}
+
+.contenedor02{
+    background-color: var(--main-bg-contenedor0);
+    width: 23rem;
+    height: 19rem;
+    margin: 1rem;
+    margin: auto;
+}
+
+.contenedor03{
+    background-color: var(--main-bg-contenedor0);
+    width: 15rem;
+    height: 13rem;
+    margin: 1rem;
+}
+
+.etiqueta01{
+    background-color: var(--main-bg-etiquetas0);
+    width: 18rem;
+    height: 5rem;
+    margin-top: 1rem;
+    margin: 1rem auto 1rem auto;
+    display: block;
+}
+
+
+.label01{
+    background-color: var(--main-bg-label0);
+    width: 18rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin: 0rem auto .25rem auto;
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+}
+
+.input01{
+    background-color: var(--main-bg-input0);
+    width: 18rem;
+    height: 3rem;
+}
+
+.button01{
+    background-color: var(--main-bg-label0);
+    width: 10rem;
+    height: 4rem;
+    background-color: rgba(240, 240, 240, 0);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: rgb(122, 122, 122);
+    text-align: center;
+    margin: 2rem auto 1rem auto;
+
+}
+
+.button02{
+    background-color: var(--main-bg-label0);
+    width: 10rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    background-color: rgba(240, 240, 240, 0);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: rgb(122, 122, 122);
+    text-align: center;
+    margin: 1.5rem auto 2rem auto;
+
+}
+
+.formulario2{
+    background-color: var(--main-bg-formulario2);
+    width: 83rem;
+    height: 18rem;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 1rem;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
+}
+.contenedor21{
+    background-color: var(--main-bg-contenedor21);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(5rem, 1rem);
+}
+
+.contenedor22{
+    background-color: var(--main-bg-contenedor22);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(5rem, auto);
+}
+
+.etiqueta21{
+    background-color: var(--main-bg-etiqueta21);
+    width: 36rem;
+    height: 2rem;
+    margin: auto;
+    align-items: center;
+}
+
+.label21{
+    background-color: var(--main-bg-label21);
+    width: 8rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+}
+
+.input21{
+    background-color: var(--main-bg-input21);
+    width: 28rem;
+    height: 2rem;
+    float: right;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+}
+
+.formulario3{
+    background-color: var(--main-bg-formulario3);
+    width: 83rem;
+    height: 9rem;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 1rem;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
+}
+.contenedor31{
+    background-color: var(--main-bg-contenedor31);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(3rem, auto);
+}
+
+.contenedor32{
+    background-color: var(--main-bg-contenedor32);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(4rem, auto);
+}
+
+.etiqueta31{
+    background-color: var(--main-bg-etiqueta31);
+    width: 35rem;
+    height: 2rem;
+    margin: auto;
+    align-items: center;
+}
+
+.label31{
+    background-color: var(--main-bg-label31);
+    width: 6rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+}
+
+.input31{
+    background-color: var(--main-bg-input31);
+    width: 26rem;
+    height: 2rem;
+    float: right;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+}
+
+
+.etiqueta32{
+    background-color: var(--main-bg-etiqueta31);
+    width: 75.5rem;
+    height: 2rem;
+    margin: auto;
+    align-items: center;
+}
+
+.label32{
+    background-color: var(--main-bg-label31);
+    width: 6rem;
+    height: 2.5rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 1rem;
+}
+
+.input32{
+    background-color: var(--main-bg-input31);
+    width: 66.5rem;
+    height: 2rem;
+    float: right;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+}
+
+.formulario5{
+    background-color: var(--main-bg-formulario5);
+    width: 83rem;
+    height: 34rem;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 1rem;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
+}
+
+.tabla5{
+    float: left;
+    margin: 1rem auto 0rem 0rem;
+    width: 80rem;
+
+}
+.contenedor51{
+    background-color: var(--main-bg-contenedor51);
+    width: 77rem;
+    height: 5rem;
+    margin: 0rem auto 0rem 1rem ;
+    display: flex;  
+    align-items: center;
+}
+
+.contenedor52{
+    background-color: var(--main-bg-contenedor52);
+    width: 5rem;
+    height: 10rem;
+    margin: 1rem;
+    display: block;
+    float: left;
+    align-items: center;
+}
+
+.contenedor53{
+    background-color: var(--main-bg-contenedor52);
+    width: 24rem;
+    height: 10rem;
+    margin: 1rem;
+    display: block;
+    float: left;
+    align-items: center;
+}
+
+.contenedor54{
+    background-color: var(--main-bg-contenedor52);
+    width: 8rem;
+    height: 10rem;
+    margin: 1rem;
+    display: block;
+    float: left;
+    align-items: center;
+}
+
+.contenedor55{
+    background-color: var(--main-bg-contenedor52);
+    width: 57rem;
+    height: 10rem;
+    margin: 1rem;
+    display: block;
+    float: left;
+    align-items: center;
+}
+
+.contenedor56{
+    background-color: var(--main-bg-contenedor52);
+    width: 18rem;
+    height: 10rem;
+    margin: 1rem;
+    display: block;
+    float: left;
+    align-items: center;
+}
+
+.etiqueta51{
+    background-color: var(--main-bg-etiqueta51);
+    width: 15rem;
+    height: 2rem;
+    margin-right: 4rem;
+    margin: auto;
+    align-items: center;
+}
+
+.etiqueta52{
+    background-color: var(--main-bg-etiqueta51);
+    width: 39rem;
+    height: 2rem;
+    margin: auto;
+    align-items: center;
+}
+
+.label51{
+    background-color: var(--main-bg-label51);
+    width: 5rem;
+    height: 2rem;  
+    float: left;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+}
+
+.input51{
+    background-color: var(--main-bg-input51);
+    width: 9rem;
+    height: 2rem;
+    float: right;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+}
+
+.label52{
+    background-color: var(--main-bg-label51);
+    width: 5rem;
+    height: 2rem;  
+    float: left;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+}
+
+.input52{
+    background-color: var(--main-bg-input51);
+    width: 32rem;
+    height: 2rem;
+    float: right;
+        font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+}
+
+.label53{
+    background-color: var(--main-bg-label51);
+    width: 5rem;
+    height: 2rem;  
+    float: left;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 1rem;
+}
+
+.input53{
+    background-color: var(--main-bg-input51);
+    width: 5rem;
+    height: 2rem;
+    float: right;
+        font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    margin-top: .4rem;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+}
+.label54{
+    background-color: var(--main-bg-label51);
+    width: 24rem;
+    height: 2rem;  
+    float: left;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 1rem;
+}
+
+.input54{
+    background-color: var(--main-bg-input51);
+    width: 24rem;
+    height: 2rem;
+    float: right;
+        font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    margin-top: .4rem;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+}
+
+.label55{
+    background-color: var(--main-bg-label51);
+    width: 8rem;
+    height: 2rem;  
+    float: left;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 1rem;
+}
+
+.input55{
+    background-color: var(--main-bg-input51);
+    width: 8rem;
+    height: 2rem;
+    float: right;
+        font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    margin-top: .4rem;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+}
+
+.label56{
+    background-color: var(--main-bg-label51);
+    width: 57rem;
+    height: 2rem;  
+    float: left;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 1rem;
+}
+
+.input56{
+    background-color: var(--main-bg-input51);
+    width: 57rem;
+    height: 10rem;
+    float: right;
+        font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    margin-top: .4rem;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+}
+
+.etiqueta53{
+    background-color: var(--main-bg-etiqueta51);
+    width: 18rem;
+    height: 2rem;  
+    margin: auto auto .6rem auto;
+
+}
+
+.label57{
+    background-color: var(--main-bg-label51);
+    width: 8rem;
+    height: 2rem;  
+    float: left;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 1rem;
+}
+
+.input57{
+    background-color: var(--main-bg-input51);
+    width: 8rem;
+    height: 2rem;
+    float: right;
+        font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+}
