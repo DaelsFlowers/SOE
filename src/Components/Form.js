@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import "./Form.css"
 import Pdf from "./PdfGenerator"
 
+
+
 function Forms() {
+
 
     const [informacion, setInformacion] = useState({
         folio0: "1",
@@ -15,32 +18,32 @@ function Forms() {
         numero1: "137",
         colonia1: "ESTANCIAS MONTREAL",
         cp1: "66064",
-        emailfacturas1: "",
-        ciudad1: "",
-        estado1: "",
-        metodoPago1: "",
-        formaPago1: "",
-        usoCFDI1: "",
+        emailfacturas1: "danieel.flowers@gmail.com",
+        ciudad1: "monterrey",
+        estado1: "BAJA CALIFORNIA SUR",
+        metodoPago1: "PPD: PAGO EN PARCIALIDADES ODIFERIDO",
+        formaPago1: "003 TRANSFERENCIA ELECTRÓNICA DE FONDOS SPEI",
+        usoCFDI1: "D09 DEPOSITOS EN CUENTAS PARA EL AHORRO, PRIMAS CON BASE",
 
-        nombre2: "",
-        email2: "",
-        cargo2: "",
-        telOficina2: "",
-        celular2: "",
+        nombre2: "DANIEL FLORES RIVAS DE LA CRUZ DOCE",
+        email2: "danieel.flowers@gmail.com",
+        cargo2: "VENTAS DE PANTALLAS",
+        telOficina2: "8119029742",
+        celular2: "+52(81)19029742",
 
-        nombre3: "",
-        email3: "",
-        cargo3: "",
-        telOficina3: "",
-        celular3: "",
+        nombre3: "DANIEL FLORES RIVAS DE LA CRUZ DOCE",
+        email3: "danieel.flowers@gmail.com",
+        cargo3: "VENTAS DE PANTALLAS",
+        telOficina3: "8119029742",
+        celular3: "8119029742",
 
-        medio4: "",
-        ciudad4: "",
-        estado4: "",
+        medio4: "VENTA DE PANTALLAS EN UN PUNTO ESPECIFICO",
+        ciudad4: "MONTERREY",
+        estado4: "BAJA CALIFORNIA SUR",
 
         desde5: "",
         hasta5: "",
-        nota5: "",
+        nota5: "POR MEDIO DE ESTE CONTRATO SE FIRMA QUE LOS IMPLICADOS ESTAN DE ACUERDO CON DICHO CONTRATO POR LA DURACIOJ INDICADA",
         cantidad15: "",
         cantidad25: "",
         cantidad35: "",
@@ -63,6 +66,7 @@ function Forms() {
         iva5: "",
         totalfinal5: "",
     })
+
 
 
 
@@ -97,23 +101,23 @@ function Forms() {
             metodoPago1: "",
             formaPago1: "",
             usoCFDI1: "",
-
+    
             nombre2: "",
             email2: "",
             cargo2: "",
             telOficina2: "",
             celular2: "",
-
+    
             nombre3: "",
             email3: "",
             cargo3: "",
             telOficina3: "",
             celular3: "",
-
+    
             medio4: "",
             ciudad4: "",
             estado4: "",
-
+    
             desde5: "",
             hasta5: "",
             nota5: "",
@@ -140,6 +144,11 @@ function Forms() {
             totalfinal5: "",
         })*/
     };
+
+    if (informacion.total15 === "NaN") {
+        informacion.total15 = "0";
+    }
+
 
     return (
         <div>
@@ -399,6 +408,7 @@ function Forms() {
                                             form_signature="15652032749810445774"
                                             form_signature_string="https://bootswatch.com&amp;&amp;staticEmail&amp;exampleInputEmail1&amp;exampleInputPassword1&amp;exampleSelect1&amp;exampleTextarea"
                                             visibility_annotation="true">
+                                            <option></option>
                                             <option>AGUASCALIENTES</option>
                                             <option>BAJA CALIFORNIA</option>
                                             <option>BAJA CALIFORNIA SUR</option>
@@ -451,6 +461,7 @@ function Forms() {
                                             form_signature="15652032749810445774"
                                             form_signature_string="https://bootswatch.com&amp;&amp;staticEmail&amp;exampleInputEmail1&amp;exampleInputPassword1&amp;exampleSelect1&amp;exampleTextarea"
                                             visibility_annotation="true">
+                                            <option></option>
                                             <option>PUE: PAGO EN UNA SOLA EXHIBICÍPON</option>
                                             <option>PPD: PAGO EN PARCIALIDADES ODIFERIDO</option>
 
@@ -472,6 +483,7 @@ function Forms() {
                                             form_signature="15652032749810445774"
                                             form_signature_string="https://bootswatch.com&amp;&amp;staticEmail&amp;exampleInputEmail1&amp;exampleInputPassword1&amp;exampleSelect1&amp;exampleTextarea"
                                             visibility_annotation="true">
+                                            <option></option>
                                             <option>001 EFECTIVO</option>
                                             <option>002 CHEQUE NOMINATIVO</option>
                                             <option>003 TRANSFERENCIA ELECTRÓNICA DE FONDOS SPEI</option>
@@ -512,6 +524,7 @@ function Forms() {
                                             form_signature="15652032749810445774"
                                             form_signature_string="https://bootswatch.com&amp;&amp;staticEmail&amp;exampleInputEmail1&amp;exampleInputPassword1&amp;exampleSelect1&amp;exampleTextarea"
                                             visibility_annotation="true">
+                                            <option></option>
                                             <option>G01 ADQUISICIÓN DE MERCANCIAS</option>
                                             <option>G02 DEVOLUCIONES, DESCUENTOS O BONIFICACIONES</option>
                                             <option>G03 GASTOS EN GENERAL</option>
@@ -804,11 +817,39 @@ function Forms() {
                                         form_signature="15652032749810445774"
                                         form_signature_string="https://bootswatch.com&amp;&amp;staticEmail&amp;exampleInputEmail1&amp;exampleInputPassword1&amp;exampleSelect1&amp;exampleTextarea"
                                         visibility_annotation="true">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
+                                        <option></option>
+                                        <option>AGUASCALIENTES</option>
+                                        <option>BAJA CALIFORNIA</option>
+                                        <option>BAJA CALIFORNIA SUR</option>
+                                        <option>CAMPECHE</option>
+                                        <option>CHIAPAS</option>
+                                        <option>CHIHUAHUA</option>
+                                        <option>CIUDAD DE MÉXICO</option>
+                                        <option>COAHUILA</option>
+                                        <option>COLIMA</option>
+                                        <option>DURANGO</option>
+                                        <option>GUANAJUATO</option>
+                                        <option>GUERRERO</option>
+                                        <option>HIDALGO</option>
+                                        <option>JALISCO</option>
+                                        <option>MÉXICO</option>
+                                        <option>MICHOACÁN</option>
+                                        <option>MORELOS</option>
+                                        <option>NAYARIT</option>
+                                        <option>NUEVO LEÓN</option>
+                                        <option>OAXACA</option>
+                                        <option>PUEBLA</option>
+                                        <option>QUERÉTARO</option>
+                                        <option>QUINTANA ROO</option>
+                                        <option>SAN LUIS POTOSÍ</option>
+                                        <option>SINALOA</option>
+                                        <option>SONORA</option>
+                                        <option>TABASCO</option>
+                                        <option>TAMAULIPAS</option>
+                                        <option>TLAXCALA</option>
+                                        <option>VERACRUZ</option>
+                                        <option>YUCATÁN</option>
+                                        <option>ZACATECAS</option>
                                     </select>
                                 </div>
                             </div>
@@ -1075,10 +1116,10 @@ function Forms() {
                                 </div>
                                 <div className='input55'>
                                     <input
-                                        type="text"
                                         class="form-control"
                                         name='total15'
-                                        value={informacion.total15}
+                                        value={(parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)}
+                                        disabled={true}
                                         id="inputDefault"
                                         onChange={handleChange}
                                         field_signature="2162400822"
@@ -1088,12 +1129,12 @@ function Forms() {
                                 </div>
                                 <div className='input55'>
                                     <input
-                                        type="text"
                                         class="form-control"
                                         name='total25'
                                         value={informacion.total25}
+                                        disabled={true}
                                         id="inputDefault"
-                                        onChange={handleChange}
+                                        onChangeCapture={handleChange}
                                         field_signature="2162400822"
                                         form_signature="12467138301455459073"
                                         form_signature_string="https://bootswatch.com&amp;&amp;disabledInput&amp;readOnlyInput&amp;inputValid&amp;inputInvalid&amp;inputLarge&amp;inputDefault&amp;inputSmall&amp;&amp;&amp;floatingInput&amp;floatingPassword"
@@ -1101,12 +1142,12 @@ function Forms() {
                                 </div>
                                 <div className='input55'>
                                     <input
-                                        type="text"
                                         class="form-control"
                                         name='total35'
                                         value={informacion.total35}
+                                        disabled={true}
                                         id="inputDefault"
-                                        onChange={handleChange}
+                                        onChangeCapture={handleChange}
                                         field_signature="2162400822"
                                         form_signature="12467138301455459073"
                                         form_signature_string="https://bootswatch.com&amp;&amp;disabledInput&amp;readOnlyInput&amp;inputValid&amp;inputInvalid&amp;inputLarge&amp;inputDefault&amp;inputSmall&amp;&amp;&amp;floatingInput&amp;floatingPassword"
