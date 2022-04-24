@@ -3,47 +3,45 @@ import "./Form.css"
 import Pdf from "./PdfGenerator"
 
 
-
 function Forms() {
 
 
     const [informacion, setInformacion] = useState({
-        folio0: "1",
-        ciudad0: "MONTERREY",
-        nombreComercial1: "DANIEL FLORES RIVAS",
-        giro1: "VENDEDOR DE PANTALLAS",
-        razonSocial1: "INVERSIONISTAS",
-        rfc1: "DJFIEJALIDJEIDJE",
-        calle1: "YUKON",
-        numero1: "137",
-        colonia1: "ESTANCIAS MONTREAL",
-        cp1: "66064",
-        emailfacturas1: "danieel.flowers@gmail.com",
-        ciudad1: "monterrey",
-        estado1: "BAJA CALIFORNIA SUR",
-        metodoPago1: "PPD: PAGO EN PARCIALIDADES ODIFERIDO",
-        formaPago1: "003 TRANSFERENCIA ELECTRÓNICA DE FONDOS SPEI",
-        usoCFDI1: "D09 DEPOSITOS EN CUENTAS PARA EL AHORRO, PRIMAS CON BASE",
+        folio0: "",
+        ciudad0: "",
+        nombreComercial1: "",
+        giro1: "",
+        razonSocial1: "",
+        rfc1: "",
+        calle1: "",
+        numero1: "",
+        colonia1: "",
+        cp1: "",
+        emailfacturas1: "",
+        ciudad1: "",
+        estado1: "",
+        metodoPago1: "",
+        formaPago1: "",
+        usoCFDI1: "",
+        nombre2: "",
+        email2: "",
+        cargo2: "",
+        telOficina2: "",
+        celular2: "",
 
-        nombre2: "DANIEL FLORES RIVAS DE LA CRUZ DOCE",
-        email2: "danieel.flowers@gmail.com",
-        cargo2: "VENTAS DE PANTALLAS",
-        telOficina2: "8119029742",
-        celular2: "+52(81)19029742",
+        nombre3: "",
+        email3: "",
+        cargo3: "",
+        telOficina3: "",
+        celular3: "",
 
-        nombre3: "DANIEL FLORES RIVAS DE LA CRUZ DOCE",
-        email3: "danieel.flowers@gmail.com",
-        cargo3: "VENTAS DE PANTALLAS",
-        telOficina3: "8119029742",
-        celular3: "8119029742",
-
-        medio4: "VENTA DE PANTALLAS EN UN PUNTO ESPECIFICO",
-        ciudad4: "MONTERREY",
-        estado4: "BAJA CALIFORNIA SUR",
+        medio4: "",
+        ciudad4: "",
+        estado4: "",
 
         desde5: "",
         hasta5: "",
-        nota5: "POR MEDIO DE ESTE CONTRATO SE FIRMA QUE LOS IMPLICADOS ESTAN DE ACUERDO CON DICHO CONTRATO POR LA DURACIOJ INDICADA",
+        nota5: "",
         cantidad15: "",
         cantidad25: "",
         cantidad35: "",
@@ -56,9 +54,6 @@ function Forms() {
         precio15: "",
         precio25: "",
         precio35: "",
-        total15: "",
-        total25: "",
-        total35: "",
         notas5: "",
         subtotal15: "",
         descuento5: "",
@@ -66,7 +61,6 @@ function Forms() {
         iva5: "",
         totalfinal5: "",
     })
-
 
 
 
@@ -145,6 +139,68 @@ function Forms() {
         })*/
     };
 
+    const handClear = (event) => {
+        setInformacion({
+            folio0: "",
+            ciudad0: "",
+            fecha0: "",
+            nombreComercial1: "",
+            giro1: "",
+            razonSocial1: "",
+            rfc1: "",
+            calle1: "",
+            numero1: "",
+            colonia1: "",
+            cp1: "",
+            emailfacturas1: "",
+            ciudad1: "",
+            estado1: "",
+            metodoPago1: "",
+            formaPago1: "",
+            usoCFDI1: "",
+
+            nombre2: "",
+            email2: "",
+            cargo2: "",
+            telOficina2: "",
+            celular2: "",
+
+            nombre3: "",
+            email3: "",
+            cargo3: "",
+            telOficina3: "",
+            celular3: "",
+
+            medio4: "",
+            ciudad4: "",
+            estado4: "",
+
+            desde5: "",
+            hasta5: "",
+            nota5: "",
+            cantidad15: "",
+            cantidad25: "",
+            cantidad35: "",
+            concepto15: "",
+            concepto25: "",
+            concepto35: "",
+            referencia15: "",
+            referencia25: "",
+            referencia35: "",
+            precio15: "",
+            precio25: "",
+            precio35: "",
+            total15: "",
+            total25: "",
+            total35: "",
+            notas5: "",
+            subtotal15: "",
+            descuento5: "",
+            subtotal25: "",
+            iva5: "",
+            totalfinal5: "",
+        })
+    }
     if (informacion.total15 === "NaN") {
         informacion.total15 = "0";
     }
@@ -192,10 +248,10 @@ function Forms() {
                             </div>
                         </div>
                         <div className='contenedor03'>
-                            <div className='button02'>
+                            <div className='button02' onClick={handClear}>
                                 LIMPIAR
                             </div>
-                            <div className='button01'>
+                            <div className='button01' onClick={handClear}>
                                 LIMPIADO PARCIAL
                             </div>
                         </div>
@@ -1118,7 +1174,7 @@ function Forms() {
                                     <input
                                         class="form-control"
                                         name='total15'
-                                        value={(parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)}
+                                        value={"$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)).toFixed(2)))}
                                         disabled={true}
                                         id="inputDefault"
                                         onChange={handleChange}
@@ -1131,7 +1187,7 @@ function Forms() {
                                     <input
                                         class="form-control"
                                         name='total25'
-                                        value={informacion.total25}
+                                        value={"$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)).toFixed(2)))}
                                         disabled={true}
                                         id="inputDefault"
                                         onChangeCapture={handleChange}
@@ -1144,7 +1200,7 @@ function Forms() {
                                     <input
                                         class="form-control"
                                         name='total35'
-                                        value={informacion.total35}
+                                        value={"$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)))}
                                         disabled={true}
                                         id="inputDefault"
                                         onChangeCapture={handleChange}
@@ -1184,7 +1240,14 @@ function Forms() {
                                         type="text"
                                         class="form-control"
                                         name='subtotal15'
-                                        value={informacion.subtotal15}
+                                        disabled={true}
+                                        value={"$" +
+                                            (Intl.NumberFormat
+                                                ("en-IN", { maximumFractionDigits: 4 }).format((
+                                                    parseFloat(((parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)).toFixed(2))) +
+                                                    parseFloat(((parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)).toFixed(2))) +
+                                                    parseFloat(((parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)))
+                                                ).toFixed(2)))}
                                         id="inputDefault"
                                         onChange={handleChange}
                                         field_signature="2162400822"
@@ -1220,7 +1283,15 @@ function Forms() {
                                         type="text"
                                         class="form-control"
                                         name='subtotal25'
-                                        value={informacion.subtotal25}
+                                        disabled={true}
+                                        value={"$" +
+                                            (Intl.NumberFormat
+                                                ("en-IN", { maximumFractionDigits: 4 }).format((
+                                                    (parseFloat(((parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)).toFixed(2))) +
+                                                        parseFloat(((parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)).toFixed(2))) +
+                                                        parseFloat(((parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)))) -
+                                                    parseFloat(informacion.descuento5)
+                                                ).toFixed(2)))}
                                         id="inputDefault"
                                         onChange={handleChange}
                                         field_signature="2162400822"
@@ -1238,7 +1309,15 @@ function Forms() {
                                         type="text"
                                         class="form-control"
                                         name='iva5'
-                                        value={informacion.iva5}
+                                        disabled={true}
+                                        value={"$" +
+                                            (Intl.NumberFormat
+                                                ("en-IN", { maximumFractionDigits: 4 }).format((
+                                                    ((parseFloat(((parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)).toFixed(2))) +
+                                                        parseFloat(((parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)).toFixed(2))) +
+                                                        parseFloat(((parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)))) -
+                                                        parseFloat(informacion.descuento5)) * 0.16
+                                                ).toFixed(2)))}
                                         id="inputDefault"
                                         onChange={handleChange}
                                         field_signature="2162400822"
@@ -1256,7 +1335,19 @@ function Forms() {
                                         type="text"
                                         class="form-control"
                                         name='totalfinal5'
-                                        value={informacion.totalfinal5}
+                                        disabled={true}
+                                        value={"$" +
+                                            (Intl.NumberFormat
+                                                ("en-IN", { maximumFractionDigits: 2 }).format((
+                                                    (((parseFloat(((parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)).toFixed(2))) +
+                                                        parseFloat(((parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)).toFixed(2))) +
+                                                        parseFloat(((parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)))) -
+                                                        parseFloat(informacion.descuento5)) * 0.16) + ((parseFloat(((parseFloat(informacion.cantidad15) *
+                                                            parseFloat(informacion.precio15)).toFixed(2))) +
+                                                            parseFloat(((parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)).toFixed(2))) +
+                                                            parseFloat(((parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)))) -
+                                                            parseFloat(informacion.descuento5))
+                                                ).toFixed(2)))}
                                         id="inputDefault"
                                         onChange={handleChange}
                                         field_signature="2162400822"
@@ -1269,7 +1360,7 @@ function Forms() {
                     </div>
                 </div>
             </form>
-            <button class="btn btn-outline-light my-2 my-sm-0" onClick={handleSubmit}>GENERAR</button>
+            <button class="btn btn-outline-dark my-4 my-xl-0" onClick={handleSubmit}>GENERAR</button>
 
         </div>
     )

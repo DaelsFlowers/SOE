@@ -4,10 +4,14 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 
 function Pdf(info) {
+    let total1 = "$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(info.cantidad15) * parseFloat(info.precio15)).toFixed(2)))
+    let total2 = "$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(info.cantidad25) * parseFloat(info.precio25)).toFixed(2)))
+    let total3 = "$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(info.cantidad35) * parseFloat(info.precio35)).toFixed(2)))
 
     const current = new Date();
     const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
     const aux = 20;
+    const aux2 = 5;
     var docDefinition = {
         pageSize: 'letter',
         // by default we use portrait, you can change it to landscape if you wish
@@ -451,7 +455,7 @@ function Pdf(info) {
                             info.cantidad25 + "\n \n" +
                             info.cantidad35 + "\n \n",
                         style: "labelsc",
-                        absolutePosition: { x: -500, y: 480 }
+                        absolutePosition: { x: -500, y: 500 }
                     },
                     {
                         width: 100,
@@ -460,7 +464,7 @@ function Pdf(info) {
                             info.concepto25 + "\n \n" +
                             info.concepto35 + "\n \n",
                         style: "labelsc",
-                        absolutePosition: { x: -250, y: 480 }
+                        absolutePosition: { x: -250, y: 500 }
                     },
                     {
                         width: 100,
@@ -469,25 +473,119 @@ function Pdf(info) {
                             info.referencia25 + "\n \n" +
                             info.referencia35 + "\n \n",
                         style: "labelsc",
-                        absolutePosition: { x: 50, y: 480 }
+                        absolutePosition: { x: 50, y: 500 }
                     },
                     {
                         width: 100,
                         text: "PRECIO UNITARIO \n\n" +
-                            info.precio15 + "\n \n" +
-                            info.precio25 + "\n \n" +
-                            info.precio35 + "\n \n",
+                            "$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(info.precio15)).toFixed(2))) + "\n \n" +
+                            "$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(info.precio25)).toFixed(2))) + "\n \n" +
+                            "$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(info.precio35)).toFixed(2))) + "\n \n",
                         style: "labelsc",
-                        absolutePosition: { x: 300, y: 480 }
+                        absolutePosition: { x: 300, y: 500 }
                     },
                     {
                         width: 100,
                         text: "TOTAL \n\n" +
-                            info.total15 + "\n \n" +
-                            info.total25 + "\n \n" +
-                            info.total35 + "\n \n",
+                            total1 + "\n \n" +
+                            total2 + "\n \n" +
+                            total3 + "\n \n",
                         style: "labelsc",
-                        absolutePosition: { x: 450, y: 480 }
+                        absolutePosition: { x: 480, y: 500 }
+                    },
+                    //------------------------------------------------------------------
+                    {
+                        width: 40,
+                        text: "SUB TOTAL:",
+                        style: "labels",
+                        absolutePosition: { x: 400, y: 585 + aux2 }
+                    },
+                    {
+                        width: 200,
+                        text: "$" +
+                            (Intl.NumberFormat
+                                ("en-IN", { maximumFractionDigits: 4 }).format((
+                                    parseFloat(((parseFloat(info.cantidad15) * parseFloat(info.precio15)).toFixed(2))) +
+                                    parseFloat(((parseFloat(info.cantidad25) * parseFloat(info.precio25)).toFixed(2))) +
+                                    parseFloat(((parseFloat(info.cantidad35) * parseFloat(info.precio35)).toFixed(2)))
+                                ).toFixed(2))),
+                        style: "inputs",
+                        absolutePosition: { x: 450, y: 585 + aux2 }
+                    },
+                    {
+                        width: 40,
+                        text: "DESCUENTO:",
+                        style: "labels",
+                        absolutePosition: { x: 400, y: 600 + aux2 }
+                    },
+                    {
+                        width: 200,
+                        text: "$" +
+                            (Intl.NumberFormat
+                                ("en-IN", { maximumFractionDigits: 4 }).format(info.descuento5)),
+                        style: "inputs",
+                        absolutePosition: { x: 450, y: 600 + aux2 }
+                    },
+                    {
+                        width: 40,
+                        text: "SUB TOTAL:",
+                        style: "labels",
+                        absolutePosition: { x: 400, y: 615 + aux2 }
+                    },
+                    {
+                        width: 200,
+                        text: "$" +
+                            (Intl.NumberFormat
+                                ("en-IN", { maximumFractionDigits: 4 }).format((
+                                    (parseFloat(((parseFloat(info.cantidad15) * parseFloat(info.precio15)).toFixed(2))) +
+                                        parseFloat(((parseFloat(info.cantidad25) * parseFloat(info.precio25)).toFixed(2))) +
+                                        parseFloat(((parseFloat(info.cantidad35) * parseFloat(info.precio35)).toFixed(2)))) -
+                                    parseFloat(info.descuento5)
+                                ).toFixed(2))),
+                        style: "inputs",
+                        absolutePosition: { x: 450, y: 615 + aux2 }
+                    },
+                    {
+                        width: 40,
+                        text: "IVA:",
+                        style: "labels",
+                        absolutePosition: { x: 400, y: 630 + aux2 }
+                    },
+                    {
+                        width: 200,
+                        text: "$" +
+                            (Intl.NumberFormat
+                                ("en-IN", { maximumFractionDigits: 4 }).format((
+                                    ((parseFloat(((parseFloat(info.cantidad15) * parseFloat(info.precio15)).toFixed(2))) +
+                                        parseFloat(((parseFloat(info.cantidad25) * parseFloat(info.precio25)).toFixed(2))) +
+                                        parseFloat(((parseFloat(info.cantidad35) * parseFloat(info.precio35)).toFixed(2)))) -
+                                        parseFloat(info.descuento5)) * 0.16
+                                ).toFixed(2))),
+                        style: "inputs",
+                        absolutePosition: { x: 450, y: 630 + aux2 }
+                    },
+                    {
+                        width: 40,
+                        text: "TOTAL:",
+                        style: "labels",
+                        absolutePosition: { x: 400, y: 645 + aux2 }
+                    },
+                    {
+                        width: 200,
+                        text: "$" +
+                            (Intl.NumberFormat
+                                ("en-IN", { maximumFractionDigits: 2 }).format((
+                                    (((parseFloat(((parseFloat(info.cantidad15) * parseFloat(info.precio15)).toFixed(2))) +
+                                        parseFloat(((parseFloat(info.cantidad25) * parseFloat(info.precio25)).toFixed(2))) +
+                                        parseFloat(((parseFloat(info.cantidad35) * parseFloat(info.precio35)).toFixed(2)))) -
+                                        parseFloat(info.descuento5)) * 0.16) + ((parseFloat(((parseFloat(info.cantidad15) *
+                                            parseFloat(info.precio15)).toFixed(2))) +
+                                            parseFloat(((parseFloat(info.cantidad25) * parseFloat(info.precio25)).toFixed(2))) +
+                                            parseFloat(((parseFloat(info.cantidad35) * parseFloat(info.precio35)).toFixed(2)))) -
+                                            parseFloat(info.descuento5))
+                                ).toFixed(2))),
+                        style: "inputs",
+                        absolutePosition: { x: 450, y: 645 + aux2 }
                     },
 
 
@@ -499,7 +597,6 @@ function Pdf(info) {
                 fontSize: 9,
                 bold: true,
                 alignment: 'left',
-                background: "#eee"
             },
             labels: {
                 fontSize: 8,
@@ -515,7 +612,6 @@ function Pdf(info) {
                 fontSize: 14,
                 alignment: 'center',
                 bold: true,
-                background: "#ddd"
             }
         }
     };
