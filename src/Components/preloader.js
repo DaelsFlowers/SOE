@@ -27,7 +27,7 @@ function PreLoader1() {
                     display: "flex",
                     height: 600
                 }}>
-                    <img src={animaton} style={{ width: 250, margin: "auto", alignContent: "center", verticalAlign: "middle" }} />
+                    <img src={animaton} style={{ width: 250, margin: "auto", alignContent: "center", verticalAlign: "middle" }} alt="lorem" />
                 </div>
 
             ) : (

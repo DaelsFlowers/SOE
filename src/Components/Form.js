@@ -203,7 +203,7 @@ function Forms() {
                 <div>
                     <div className='contenido0'>
                         <div className='contenedor01'>
-                            <img src={Imagen} style={{ width: 500, height: 300 }} />
+                            <img src={Imagen} style={{ width: 500, height: 300 }} alt="lorem" />
                         </div>
                         <div className='contenedor02'>
                             <div className='etiqueta01'>

@@ -8,8 +8,8 @@ function Navbar() {
     return (
         <div>
             <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-                <a class="navbar-brand" className='titulopag'>GENERADOR DE CONTRATOS
-                    <a style={{ fontSize: 10, marginLeft: 10 }}>version 0.4.2 beta</a>
+                <a class="navbar-brand" className='titulopag' href='google.com'>GENERADOR DE CONTRATOS
+                    <a style={{ fontSize: 10, marginLeft: 10 }} href="google.com">version 0.4.2 beta</a>
                 </a>
 
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
