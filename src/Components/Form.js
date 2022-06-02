@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import "./Form.css"
 import Pdf from "./PdfGenerator"
-
+import Imagen from "./fonts/olog-modified.png"
+//import { isNumber } from 'pdfmake/src/helpers'
 
 function Forms() {
-
-
     const [informacion, setInformacion] = useState({
         folio0: "",
         ciudad0: "",
@@ -61,16 +60,11 @@ function Forms() {
         iva5: "",
         totalfinal5: "",
     })
-
-
-
     const current = new Date();
     const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
-
     const handleChange = (event) => {
         setInformacion({ ...informacion, [event.target.name]: event.target.value });
     };
-
     const handleSubmit = (event) => {
         // prevents the submit button from refreshing the page
         event.preventDefault();
@@ -138,7 +132,6 @@ function Forms() {
             totalfinal5: "",
         })*/
     };
-
     const handClear = (event) => {
         setInformacion({
             folio0: "",
@@ -204,14 +197,13 @@ function Forms() {
     if (informacion.total15 === "NaN") {
         informacion.total15 = "0";
     }
-
-
     return (
         <div>
             <form>
                 <div>
                     <div className='contenido0'>
                         <div className='contenedor01'>
+                            <img src={Imagen} style={{ width: 500, height: 300 }} />
                         </div>
                         <div className='contenedor02'>
                             <div className='etiqueta01'>
@@ -1174,7 +1166,11 @@ function Forms() {
                                     <input
                                         class="form-control"
                                         name='total15'
-                                        value={"$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)).toFixed(2)))}
+                                        value={
+                                            informacion.cantidad15 === "" || informacion.precio15 === "" ?
+                                                "$0.00" :
+                                                "$" + (Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)).toFixed(2)))
+                                        }
                                         disabled={true}
                                         id="inputDefault"
                                         onChange={handleChange}
@@ -1187,7 +1183,9 @@ function Forms() {
                                     <input
                                         class="form-control"
                                         name='total25'
-                                        value={"$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)).toFixed(2)))}
+                                        value={
+                                            informacion.cantidad25 === "" || informacion.precio25 === "" ? "$0.00" : "$" + (Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)).toFixed(2)))
+                                        }
                                         disabled={true}
                                         id="inputDefault"
                                         onChangeCapture={handleChange}
@@ -1200,7 +1198,9 @@ function Forms() {
                                     <input
                                         class="form-control"
                                         name='total35'
-                                        value={"$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)))}
+                                        value={
+                                            informacion.cantidad35 === "" || informacion.precio35 === "" ? "$0.00" : "$" + (Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)))
+                                        }
                                         disabled={true}
                                         id="inputDefault"
                                         onChangeCapture={handleChange}
@@ -1241,13 +1241,13 @@ function Forms() {
                                         class="form-control"
                                         name='subtotal15'
                                         disabled={true}
-                                        value={"$" +
-                                            (Intl.NumberFormat
-                                                ("en-IN", { maximumFractionDigits: 4 }).format((
-                                                    parseFloat(((parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)).toFixed(2))) +
-                                                    parseFloat(((parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)).toFixed(2))) +
-                                                    parseFloat(((parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)))
-                                                ).toFixed(2)))}
+                                        value={
+                                            "$" +
+                                            Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((
+                                                parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)) ? "0.00" : parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15))) +
+                                                parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)) ? "0.00" : parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25))) +
+                                                parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)) ? "0.00" : parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)))).toFixed(2))
+                                        }
                                         id="inputDefault"
                                         onChange={handleChange}
                                         field_signature="2162400822"
@@ -1284,14 +1284,19 @@ function Forms() {
                                         class="form-control"
                                         name='subtotal25'
                                         disabled={true}
-                                        value={"$" +
-                                            (Intl.NumberFormat
-                                                ("en-IN", { maximumFractionDigits: 4 }).format((
-                                                    (parseFloat(((parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)).toFixed(2))) +
-                                                        parseFloat(((parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)).toFixed(2))) +
-                                                        parseFloat(((parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)))) -
-                                                    parseFloat(informacion.descuento5)
-                                                ).toFixed(2)))}
+                                        value={
+                                            informacion.descuento5 === "" ? "$" +
+                                                Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)) ? "0.00" : parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15))) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)) ? "0.00" : parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25))) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)) ? "0.00" : parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)))).toFixed(2))
+                                                :
+                                                "$" +
+                                                Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)) ? "0.00" : parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15))) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)) ? "0.00" : parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25))) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)) ? "0.00" : parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)))).toFixed(2) - parseFloat(informacion.descuento5))
+                                        }
                                         id="inputDefault"
                                         onChange={handleChange}
                                         field_signature="2162400822"
@@ -1310,14 +1315,19 @@ function Forms() {
                                         class="form-control"
                                         name='iva5'
                                         disabled={true}
-                                        value={"$" +
-                                            (Intl.NumberFormat
-                                                ("en-IN", { maximumFractionDigits: 4 }).format((
-                                                    ((parseFloat(((parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)).toFixed(2))) +
-                                                        parseFloat(((parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)).toFixed(2))) +
-                                                        parseFloat(((parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)))) -
-                                                        parseFloat(informacion.descuento5)) * 0.16
-                                                ).toFixed(2)))}
+                                        value={
+                                            informacion.descuento5 === "" ? "$" +
+                                                Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format(((
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)) ? "0.00" : parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15))) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)) ? "0.00" : parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25))) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)) ? "0.00" : parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)))) * .16).toFixed(2))
+                                                :
+                                                "$" +
+                                                Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((((
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)) ? "0.00" : parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15))) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)) ? "0.00" : parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25))) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)) ? "0.00" : parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)))) - parseFloat(informacion.descuento5)) * .16).toFixed(2))
+                                        }
                                         id="inputDefault"
                                         onChange={handleChange}
                                         field_signature="2162400822"
@@ -1336,18 +1346,26 @@ function Forms() {
                                         class="form-control"
                                         name='totalfinal5'
                                         disabled={true}
-                                        value={"$" +
-                                            (Intl.NumberFormat
-                                                ("en-IN", { maximumFractionDigits: 2 }).format((
-                                                    (((parseFloat(((parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)).toFixed(2))) +
-                                                        parseFloat(((parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)).toFixed(2))) +
-                                                        parseFloat(((parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)))) -
-                                                        parseFloat(informacion.descuento5)) * 0.16) + ((parseFloat(((parseFloat(informacion.cantidad15) *
-                                                            parseFloat(informacion.precio15)).toFixed(2))) +
-                                                            parseFloat(((parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)).toFixed(2))) +
-                                                            parseFloat(((parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)).toFixed(2)))) -
-                                                            parseFloat(informacion.descuento5))
-                                                ).toFixed(2)))}
+                                        value={
+                                            informacion.descuento5 === "" ? "$" +
+                                                Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((((
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)) ? "0.00" : parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15))) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)) ? "0.00" : parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25))) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)) ? "0.00" : parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)))) * .16) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)) ? "0.00" : parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15))) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)) ? "0.00" : parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25))) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)) ? "0.00" : parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)))).toFixed(2))
+                                                :
+                                                "$" +
+                                                Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format(((((
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)) ? "0.00" : parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15))) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)) ? "0.00" : parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25))) +
+                                                    parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)) ? "0.00" : parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)))) - parseFloat(informacion.descuento5)) * .16) +
+                                                    (
+                                                        parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15)) ? "0.00" : parseFloat(informacion.cantidad15) * parseFloat(informacion.precio15))) +
+                                                        parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25)) ? "0.00" : parseFloat(informacion.cantidad25) * parseFloat(informacion.precio25))) +
+                                                        parseFloat(parseFloat(isNaN(parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)) ? "0.00" : parseFloat(informacion.cantidad35) * parseFloat(informacion.precio35)))) - parseFloat(informacion.descuento5)).toFixed(2))
+                                        }
                                         id="inputDefault"
                                         onChange={handleChange}
                                         field_signature="2162400822"

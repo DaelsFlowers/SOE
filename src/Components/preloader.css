@@ -1,0 +1,13 @@
+.App {
+    text-align: center;
+  }
+  
+  .formulario{
+    background-color: rgb(221, 221, 221);
+    margin: 2rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
+    border-radius: 1%;
+  }

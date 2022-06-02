@@ -30,6 +30,13 @@
     --main-bg-input51: rgba(89, 0, 255, 0);
 }
 
+.contenedor01{
+    
+    width: 45rem;
+    height: 20rem;
+    margin: 1rem;
+}
+
 .titulo{
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
@@ -223,32 +230,18 @@
 
 .contenido0{
 background-color: var(--main-bg-contenido0);
-width: auto;
-height: 14rem;
-margin: 2rem;
 display: flex;
 }
 
-.contenedor01{
-    background-color: gray;
-    width: 50rem;
-    height: 13rem;
-    margin: 1rem;
-}
 
 .contenedor02{
     background-color: var(--main-bg-contenedor0);
-    width: 23rem;
-    height: 19rem;
-    margin: 1rem;
     margin: auto;
 }
 
 .contenedor03{
     background-color: var(--main-bg-contenedor0);
-    width: 15rem;
-    height: 13rem;
-    margin: 1rem;
+    margin: auto;
 }
 
 .etiqueta01{

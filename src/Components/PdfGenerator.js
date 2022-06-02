@@ -2,30 +2,44 @@ import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
-
 function Pdf(info) {
-    let total1 = "$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(info.cantidad15) * parseFloat(info.precio15)).toFixed(2)))
-    let total2 = "$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(info.cantidad25) * parseFloat(info.precio25)).toFixed(2)))
-    let total3 = "$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(info.cantidad35) * parseFloat(info.precio35)).toFixed(2)))
+    let total1 = info.cantidad15 === "" || info.precio15 === "" ? "$0.00" : "$" + (Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((parseFloat(info.cantidad15) * parseFloat(info.precio15)).toFixed(2)))
+    let total2 = info.cantidad25 === "" || info.precio25 === "" ? "$0.00" : "$" + (Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((parseFloat(info.cantidad25) * parseFloat(info.precio25)).toFixed(2)))
+    let total3 = info.cantidad35 === "" || info.precio35 === "" ? "$0.00" : "$" + (Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((parseFloat(info.cantidad35) * parseFloat(info.precio35)).toFixed(2)))
 
     const current = new Date();
     const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
     const aux = 20;
     const aux2 = 5;
+
+
+
     var docDefinition = {
         pageSize: 'letter',
-        // by default we use portrait, you can change it to landscape if you wish
-        // [left, top, right, bottom] or [horizontal, vertical] or just a number for equal margins
-        content: [
-            {
 
+        content: [
+
+            {
                 columns: [
                     //part0
+                    // {
+
+                    //     width: 100,
+                    //     text: "FOLIO\n" + info.folio0,
+                    //     style: "labelsc",
+                    //     absolutePosition: { x: 500, y: 25 },
+                    // },
                     {
                         width: 100,
-                        text: "FOLIO\n" + info.folio0,
-                        style: "labelsc",
-                        absolutePosition: { x: 500, y: 25 },
+                        text: "POP PUBLICIDAD",
+                        style: "poppublic1",
+                        absolutePosition: { x: 65, y: 10 }
+                    },
+                    {
+                        width: 100,
+                        text: "¡HACEMOS QUE TUS CLIENTES TE VEAN!",
+                        style: "poppublic2",
+                        absolutePosition: { x: 35, y: 40 }
                     },
                     {
                         width: 100,
@@ -478,9 +492,9 @@ function Pdf(info) {
                     {
                         width: 100,
                         text: "PRECIO UNITARIO \n\n" +
-                            "$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(info.precio15)).toFixed(2))) + "\n \n" +
-                            "$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(info.precio25)).toFixed(2))) + "\n \n" +
-                            "$" + (Intl.NumberFormat("en-IN", { maximumFractionDigits: 4 }).format((parseFloat(info.precio35)).toFixed(2))) + "\n \n",
+                            "$" + (info.precio15 === "" ? "0.00" : (Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((parseFloat(info.precio15)).toFixed(2)))) + "\n \n" +
+                            "$" + (info.precio25 === "" ? "0.00" : (Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((parseFloat(info.precio25)).toFixed(2)))) + "\n \n" +
+                            "$" + (info.precio35 === "" ? "0.00" : (Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((parseFloat(info.precio35)).toFixed(2)))) + "\n \n",
                         style: "labelsc",
                         absolutePosition: { x: 300, y: 500 }
                     },
@@ -503,12 +517,10 @@ function Pdf(info) {
                     {
                         width: 200,
                         text: "$" +
-                            (Intl.NumberFormat
-                                ("en-IN", { maximumFractionDigits: 4 }).format((
-                                    parseFloat(((parseFloat(info.cantidad15) * parseFloat(info.precio15)).toFixed(2))) +
-                                    parseFloat(((parseFloat(info.cantidad25) * parseFloat(info.precio25)).toFixed(2))) +
-                                    parseFloat(((parseFloat(info.cantidad35) * parseFloat(info.precio35)).toFixed(2)))
-                                ).toFixed(2))),
+                            Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((
+                                parseFloat(parseFloat(isNaN(parseFloat(info.cantidad15) * parseFloat(info.precio15)) ? "0.00" : parseFloat(info.cantidad15) * parseFloat(info.precio15))) +
+                                parseFloat(parseFloat(isNaN(parseFloat(info.cantidad25) * parseFloat(info.precio25)) ? "0.00" : parseFloat(info.cantidad25) * parseFloat(info.precio25))) +
+                                parseFloat(parseFloat(isNaN(parseFloat(info.cantidad35) * parseFloat(info.precio35)) ? "0.00" : parseFloat(info.cantidad35) * parseFloat(info.precio35)))).toFixed(2)),
                         style: "inputs",
                         absolutePosition: { x: 450, y: 585 + aux2 }
                     },
@@ -522,7 +534,7 @@ function Pdf(info) {
                         width: 200,
                         text: "$" +
                             (Intl.NumberFormat
-                                ("en-IN", { maximumFractionDigits: 4 }).format(info.descuento5)),
+                                ("en-US", { maximumFractionDigits: 4 }).format(info.descuento5)),
                         style: "inputs",
                         absolutePosition: { x: 450, y: 600 + aux2 }
                     },
@@ -534,14 +546,17 @@ function Pdf(info) {
                     },
                     {
                         width: 200,
-                        text: "$" +
-                            (Intl.NumberFormat
-                                ("en-IN", { maximumFractionDigits: 4 }).format((
-                                    (parseFloat(((parseFloat(info.cantidad15) * parseFloat(info.precio15)).toFixed(2))) +
-                                        parseFloat(((parseFloat(info.cantidad25) * parseFloat(info.precio25)).toFixed(2))) +
-                                        parseFloat(((parseFloat(info.cantidad35) * parseFloat(info.precio35)).toFixed(2)))) -
-                                    parseFloat(info.descuento5)
-                                ).toFixed(2))),
+                        text: info.descuento5 === "" ? "$" +
+                            Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((
+                                parseFloat(parseFloat(isNaN(parseFloat(info.cantidad15) * parseFloat(info.precio15)) ? "0.00" : parseFloat(info.cantidad15) * parseFloat(info.precio15))) +
+                                parseFloat(parseFloat(isNaN(parseFloat(info.cantidad25) * parseFloat(info.precio25)) ? "0.00" : parseFloat(info.cantidad25) * parseFloat(info.precio25))) +
+                                parseFloat(parseFloat(isNaN(parseFloat(info.cantidad35) * parseFloat(info.precio35)) ? "0.00" : parseFloat(info.cantidad35) * parseFloat(info.precio35)))).toFixed(2))
+                            :
+                            "$" +
+                            Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((
+                                parseFloat(parseFloat(isNaN(parseFloat(info.cantidad15) * parseFloat(info.precio15)) ? "0.00" : parseFloat(info.cantidad15) * parseFloat(info.precio15))) +
+                                parseFloat(parseFloat(isNaN(parseFloat(info.cantidad25) * parseFloat(info.precio25)) ? "0.00" : parseFloat(info.cantidad25) * parseFloat(info.precio25))) +
+                                parseFloat(parseFloat(isNaN(parseFloat(info.cantidad35) * parseFloat(info.precio35)) ? "0.00" : parseFloat(info.cantidad35) * parseFloat(info.precio35)))).toFixed(2) - parseFloat(info.descuento5)),
                         style: "inputs",
                         absolutePosition: { x: 450, y: 615 + aux2 }
                     },
@@ -553,14 +568,18 @@ function Pdf(info) {
                     },
                     {
                         width: 200,
-                        text: "$" +
-                            (Intl.NumberFormat
-                                ("en-IN", { maximumFractionDigits: 4 }).format((
-                                    ((parseFloat(((parseFloat(info.cantidad15) * parseFloat(info.precio15)).toFixed(2))) +
-                                        parseFloat(((parseFloat(info.cantidad25) * parseFloat(info.precio25)).toFixed(2))) +
-                                        parseFloat(((parseFloat(info.cantidad35) * parseFloat(info.precio35)).toFixed(2)))) -
-                                        parseFloat(info.descuento5)) * 0.16
-                                ).toFixed(2))),
+                        text:
+                            info.descuento5 === "" ? "$" +
+                                Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format(((
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad15) * parseFloat(info.precio15)) ? "0.00" : parseFloat(info.cantidad15) * parseFloat(info.precio15))) +
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad25) * parseFloat(info.precio25)) ? "0.00" : parseFloat(info.cantidad25) * parseFloat(info.precio25))) +
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad35) * parseFloat(info.precio35)) ? "0.00" : parseFloat(info.cantidad35) * parseFloat(info.precio35)))) * .16).toFixed(2))
+                                :
+                                "$" +
+                                Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((((
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad15) * parseFloat(info.precio15)) ? "0.00" : parseFloat(info.cantidad15) * parseFloat(info.precio15))) +
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad25) * parseFloat(info.precio25)) ? "0.00" : parseFloat(info.cantidad25) * parseFloat(info.precio25))) +
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad35) * parseFloat(info.precio35)) ? "0.00" : parseFloat(info.cantidad35) * parseFloat(info.precio35)))) - parseFloat(info.descuento5)) * .16).toFixed(2)),
                         style: "inputs",
                         absolutePosition: { x: 450, y: 630 + aux2 }
                     },
@@ -572,18 +591,25 @@ function Pdf(info) {
                     },
                     {
                         width: 200,
-                        text: "$" +
-                            (Intl.NumberFormat
-                                ("en-IN", { maximumFractionDigits: 2 }).format((
-                                    (((parseFloat(((parseFloat(info.cantidad15) * parseFloat(info.precio15)).toFixed(2))) +
-                                        parseFloat(((parseFloat(info.cantidad25) * parseFloat(info.precio25)).toFixed(2))) +
-                                        parseFloat(((parseFloat(info.cantidad35) * parseFloat(info.precio35)).toFixed(2)))) -
-                                        parseFloat(info.descuento5)) * 0.16) + ((parseFloat(((parseFloat(info.cantidad15) *
-                                            parseFloat(info.precio15)).toFixed(2))) +
-                                            parseFloat(((parseFloat(info.cantidad25) * parseFloat(info.precio25)).toFixed(2))) +
-                                            parseFloat(((parseFloat(info.cantidad35) * parseFloat(info.precio35)).toFixed(2)))) -
-                                            parseFloat(info.descuento5))
-                                ).toFixed(2))),
+                        text:
+                            info.descuento5 === "" ? "$" +
+                                Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format((((
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad15) * parseFloat(info.precio15)) ? "0.00" : parseFloat(info.cantidad15) * parseFloat(info.precio15))) +
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad25) * parseFloat(info.precio25)) ? "0.00" : parseFloat(info.cantidad25) * parseFloat(info.precio25))) +
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad35) * parseFloat(info.precio35)) ? "0.00" : parseFloat(info.cantidad35) * parseFloat(info.precio35)))) * .16) +
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad15) * parseFloat(info.precio15)) ? "0.00" : parseFloat(info.cantidad15) * parseFloat(info.precio15))) +
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad25) * parseFloat(info.precio25)) ? "0.00" : parseFloat(info.cantidad25) * parseFloat(info.precio25))) +
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad35) * parseFloat(info.precio35)) ? "0.00" : parseFloat(info.cantidad35) * parseFloat(info.precio35)))).toFixed(2))
+                                :
+                                "$" +
+                                Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format(((((
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad15) * parseFloat(info.precio15)) ? "0.00" : parseFloat(info.cantidad15) * parseFloat(info.precio15))) +
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad25) * parseFloat(info.precio25)) ? "0.00" : parseFloat(info.cantidad25) * parseFloat(info.precio25))) +
+                                    parseFloat(parseFloat(isNaN(parseFloat(info.cantidad35) * parseFloat(info.precio35)) ? "0.00" : parseFloat(info.cantidad35) * parseFloat(info.precio35)))) - parseFloat(info.descuento5)) * .16) +
+                                    (
+                                        parseFloat(parseFloat(isNaN(parseFloat(info.cantidad15) * parseFloat(info.precio15)) ? "0.00" : parseFloat(info.cantidad15) * parseFloat(info.precio15))) +
+                                        parseFloat(parseFloat(isNaN(parseFloat(info.cantidad25) * parseFloat(info.precio25)) ? "0.00" : parseFloat(info.cantidad25) * parseFloat(info.precio25))) +
+                                        parseFloat(parseFloat(isNaN(parseFloat(info.cantidad35) * parseFloat(info.precio35)) ? "0.00" : parseFloat(info.cantidad35) * parseFloat(info.precio35)))) - parseFloat(info.descuento5)).toFixed(2)),
                         style: "inputs",
                         absolutePosition: { x: 450, y: 645 + aux2 }
                     },
@@ -597,6 +623,16 @@ function Pdf(info) {
                 fontSize: 9,
                 bold: true,
                 alignment: 'left',
+            },
+            poppublic1: {
+                fontSize: 24,
+                color: "#000",
+                bold: true,
+            },
+            poppublic2: {
+                fontSize: 14,
+                color: "#000",
+                bold: true,
             },
             labels: {
                 fontSize: 8,
