@@ -8,19 +8,18 @@ function Navbar() {
     return (
         <div>
             <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-                <a class="navbar-brand" className='titulopag' href='google.com'>GENERADOR DE CONTRATOS
-                    <a style={{ fontSize: 10, marginLeft: 10 }} href="google.com">version 0.4.2 beta</a>
-                </a>
+                <div class="navbar-brand" className='titulopag' style={{ cursor: "default" }}>GENERADOR DE CONTRATOS <div style={{ fontSize: 10 }} >version 0.4.2 beta</div>
+                </div>
 
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                     aria-expanded="false" aria-label="Toggle navigation"></button>
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" className='nav-link' href="google.com">PROXIMAMENTE <span class="sr-only"></span></a>
+                            <div class="nav-link" className='nav-link' style={{ cursor: "default" }} >PROXIMAMENTE <span class="sr-only"></span></div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" className='nav-link' href="google.com">PROXIMAMENTE</a>
+                            <div class="nav-link" className='nav-link' style={{ cursor: "default" }}>PROXIMAMENTE</div>
                         </li>
                     </ul>
                     <div className='generarbutton'>
