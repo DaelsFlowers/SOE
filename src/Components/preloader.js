@@ -17,12 +17,12 @@ function PreLoader1() {
                     setData(json);
                     setDone(true);
                 });
-        }, 4000);
+        }, 2000);
     }, []);
 
     return (
         <>
-            {!done ? (
+            {!done || !data ? (
                 <div style={{
                     display: "flex",
                     height: 600
