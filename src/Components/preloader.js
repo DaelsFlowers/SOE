@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import ReactLoading from "react-loading";
 import animaton from "./fonts/INTENTO2.gif"
 import Forms from "./Form";
 import Navbar from "./Navbar";
