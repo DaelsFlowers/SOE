@@ -5,7 +5,7 @@
     --main-bg-etiqueta: rgba(255, 251, 9, 0);
     --main-bg-label: rgba(54, 9, 255, 0);
     --main-bg-input: rgba(255, 9, 214, 0);
-    --main-bg-contenido0: rgba(73, 17, 230, 0);
+    --main-bg-contenido0: rgba(74, 17, 230, 0);
     --main-bg-etiquetas0: rgba(252, 143, 0, 0);
     --main-bg-label0: rgba(195, 245, 13, 0);
     --main-bg-input0: rgba(6, 217, 245, 0);
@@ -33,20 +33,19 @@
 .contenedor01{
     
     width: 45rem;
-    height: 20rem;
     margin: 1rem;
 }
 
 .titulo{
     font-family: 'Rubik', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
   }
 
   .formulario1{
   background-color: rgb(255, 255, 255);
   width: min-content;
-  height: 27rem;
+  height: 26rem;
   margin: auto;
   padding: 1rem;
   -webkit-box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.5); 
@@ -59,13 +58,13 @@
   width: 40rem;
   float: left;
   display: block;
-  margin: 1rem auto 1rem 0rem;
+  margin: 0rem auto 1rem 0rem;
   }
   .contenedor2{
   background-color: var(--main-bg-contenedor1);
   width: 40rem;
   float: left;
-  margin: 1rem auto 1rem 1rem;
+  margin: 0rem auto 1rem 1rem;
   }
   .contenedor3{
     background-color: var(--main-bg-contenedor2);
@@ -90,7 +89,7 @@
     float: left;
     text-align: left;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 2rem;
   }
   .input1{
@@ -119,7 +118,7 @@
     float: left;
     text-align: left;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 2rem;
   }
   .input2{
@@ -148,7 +147,7 @@
     float: left;
     text-align: left;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 2rem;
   }
   .input3{
@@ -177,7 +176,7 @@
     float: left;
     text-align: left;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 2rem;
     
   }
@@ -188,7 +187,7 @@
     float: left;
     text-align: left;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 2rem;
     margin-left: 1rem;
   }
@@ -216,7 +215,7 @@
     float: left;
     text-align: left;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 2rem;
   }
   .input5{
@@ -225,7 +224,7 @@
     height: 1rem;
     margin: auto 0 1rem auto;
     float: right;
-    font-size: 12px;
+    font-size: 10px;
   }
 
 .contenido0{
@@ -261,7 +260,7 @@ display: flex;
     margin-top: 1rem;
     margin: 0rem auto .25rem auto;
     font-family: 'Rubik', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .input01{
@@ -282,7 +281,7 @@ display: flex;
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
     cursor: pointer;
     font-family: 'Rubik', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(122, 122, 122);
     text-align: center;
     margin: 2rem auto 1rem auto;
@@ -302,7 +301,7 @@ display: flex;
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
     cursor: pointer;
     font-family: 'Rubik', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(122, 122, 122);
     text-align: center;
     margin: 1.5rem auto 2rem auto;
@@ -312,7 +311,7 @@ display: flex;
 .formulario2{
     background-color: var(--main-bg-formulario2);
     width: 83rem;
-    height: 18rem;
+    height: 13rem;
     margin: auto;
     padding: 1rem;
     margin-top: 1rem;
@@ -325,14 +324,14 @@ display: flex;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    grid-auto-rows: minmax(5rem, 1rem);
+    grid-auto-rows: minmax(3rem, 1rem);
 }
 
 .contenedor22{
     background-color: var(--main-bg-contenedor22);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(5rem, auto);
+    grid-auto-rows: minmax(4rem, 1rem);
 }
 
 .etiqueta21{
@@ -350,7 +349,7 @@ display: flex;
     float: left;
     text-align: left;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 2rem;
 }
 
@@ -404,7 +403,7 @@ display: flex;
     float: left;
     text-align: left;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 2rem;
 }
 
@@ -433,7 +432,7 @@ display: flex;
     float: left;
     text-align: left;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1rem;
 }
 
@@ -547,7 +546,7 @@ display: flex;
     float: left;
     text-align: center;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 2rem;
 }
 
@@ -557,7 +556,7 @@ display: flex;
     height: 2rem;
     float: right;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
 }
@@ -569,7 +568,7 @@ display: flex;
     float: left;
     text-align: center;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 2rem;
 }
 
@@ -579,7 +578,7 @@ display: flex;
     height: 2rem;
     float: right;
         font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
 }
@@ -591,7 +590,7 @@ display: flex;
     float: left;
     text-align: center;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1rem;
 }
 
@@ -601,7 +600,7 @@ display: flex;
     height: 2rem;
     float: right;
         font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: .4rem;
     -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
@@ -613,7 +612,7 @@ display: flex;
     float: left;
     text-align: center;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1rem;
 }
 
@@ -623,7 +622,7 @@ display: flex;
     height: 2rem;
     float: right;
         font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: .4rem;
     -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
@@ -636,7 +635,7 @@ display: flex;
     float: left;
     text-align: center;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1rem;
 }
 
@@ -646,7 +645,7 @@ display: flex;
     height: 2rem;
     float: right;
         font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: .4rem;
     -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
@@ -659,7 +658,7 @@ display: flex;
     float: left;
     text-align: center;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1rem;
 }
 
@@ -669,7 +668,7 @@ display: flex;
     height: 10rem;
     float: right;
         font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: .4rem;
     -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
@@ -690,7 +689,7 @@ display: flex;
     float: left;
     text-align: left;
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1rem;
 }
 
@@ -700,7 +699,7 @@ display: flex;
     height: 2rem;
     float: right;
         font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5); 
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.5);
 }
